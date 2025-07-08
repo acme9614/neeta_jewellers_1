@@ -261,8 +261,8 @@
         class="max-w-6xl mx-auto grid grid-cols-4 gap-4 justify-center place-items-center"
       >
         <!-- 4 Visible Cards -->
-        <div 
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center" 
+        <div
+          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
           onclick="navigateToScheme()"
         >
           <img
@@ -275,7 +275,7 @@
 
         <div
           class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-            onclick="navigateToBankDetails()"
+          onclick="navigateToBankDetails()"
         >
           <img
             src="https://cdn-icons-png.flaticon.com/128/2830/2830155.png"
@@ -308,13 +308,12 @@
           />
           <span class="text-sm font-normal md:font-medium">Rate</span>
         </div>
-
       </div>
 
       <!-- Extra Cards (Hidden Initially) -->
       <div
         id="moreCards"
-        class="max-w-6xl mx-auto grid grid-cols-4 gap-4 justify-center place-items-center mt-4 overflow-hidden transition-all duration-500 ease-in-out"
+        class="max-w-6xl mx-auto grid grid-cols-4 gap-4 justify-center place-items-center mt-4 transition-all duration-500 ease-in-out"
         style="max-height: 0; opacity: 0"
       >
         <!-- Add more cards below -->
@@ -380,7 +379,7 @@
 
         <div
           class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-            onclick="navigateToDigitalGold()"
+          onclick="navigateToDigitalGold()"
         >
           <img
             src="https://cdn-icons-png.flaticon.com/128/10040/10040888.png"
@@ -389,7 +388,6 @@
           />
           <span class="text-sm font-normal md:font-medium">Gold</span>
         </div>
-
 
         <div
           class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
@@ -414,7 +412,6 @@
           />
           <span class="text-sm font-normal md:font-medium">Settings</span>
         </div>
-
       </div>
 
       <!-- Toggle Button -->
@@ -442,7 +439,8 @@
       </div>
     </section>
 
-    <section class="bg-white px-4 pb-20">
+    <!-- collection swiper  -->
+    <section class="bg-white px-4 pb-8">
       <!-- Header -->
       <div class="text-center py-4 flex items-center justify-center gap-4">
         <p class="text-lg">
@@ -480,53 +478,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Bottom Navbar with Image Icons -->
-    <div class="fixed bottom-0 left-0 right-0 bg-[#8D5B46] z-50">
-      <div
-        class="flex justify-around items-center text-xs py-2 text-black font-medium"
-      >
-        <!-- Home -->
-        <div class="flex flex-col items-center">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/263/263115.png"
-            alt="Home"
-            class="w-6 h-6 mb-1 invert"
-          />
-          <span class="text-white">Home</span>
-        </div>
-
-        <!-- Wallet -->
-        <div class="flex flex-col items-center">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/3757/3757939.png"
-            alt="Wallet"
-            class="w-6 h-6 mb-1 invert"
-          />
-          <span class="text-white">Wallet</span>
-        </div>
-
-        <!-- My Txn -->
-        <div class="flex flex-col items-center">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/4308/4308487.png"
-            alt="My Txn"
-            class="w-6 h-6 mb-1 invert"
-          />
-          <span class="text-white">My Txn</span>
-        </div>
-
-        <!-- Contact -->
-        <div class="flex flex-col items-center">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/3059/3059408.png"
-            alt="Contact"
-            class="w-6 h-6 mb-1 invert"
-          />
-          <span class="text-white">Contact</span>
-        </div>
-      </div>
-    </div>
 
     <!-- SwiperJS Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

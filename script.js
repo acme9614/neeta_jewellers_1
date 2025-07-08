@@ -10,9 +10,6 @@ function closeDrawer() {
   document.getElementById("menuButton").classList.remove("hidden");
 }
 
-
-
-
 // drawers menu
 
 function navigateToScheme() {
@@ -76,10 +73,6 @@ function navigateToHomePage() {
   Toaster.postMessage("navigateToHomePage");
 }
 
-
-
-
-
 // brandSwiper
 const brandSwiper = new Swiper(".brandSwiper", {
   loop: true,
@@ -98,42 +91,38 @@ const brandSwiper = new Swiper(".brandSwiper", {
   },
 });
 
+// drawertabs
 
-// drawertabs 
+function toggleCards() {
+  const section = document.getElementById("moreCards");
+  const buttonText = document.querySelector("#toggleButton span");
 
-   function toggleCards() {
-        const section = document.getElementById("moreCards");
-        const buttonText = document.querySelector("#toggleButton span");
+  if (section.style.maxHeight === "0px" || !section.style.maxHeight) {
+    section.style.maxHeight = "1000px";
+    section.style.opacity = "1";
+    buttonText.textContent = "Show Less";
+  } else {
+    section.style.maxHeight = "0";
+    section.style.opacity = "0";
+    buttonText.textContent = "Show More";
+  }
+}
 
-        if (section.style.maxHeight === "0px" || !section.style.maxHeight) {
-          section.style.maxHeight = "1000px";
-          section.style.opacity = "1";
-          buttonText.textContent = "Show Less";
-        } else {
-          section.style.maxHeight = "0";
-          section.style.opacity = "0";
-          buttonText.textContent = "Show More";
-        }
-      }
-
-
-
-      
-    new Swiper('.branding-image-slider', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      loop: true,
-      slidesPerView: 'auto',
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2.5,
-        slideShadows: false,
-      }
-    });
+new Swiper(".branding-image-slider", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: "auto",
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2.5,
+    slideShadows: false,
+  },
+});
