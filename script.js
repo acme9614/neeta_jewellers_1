@@ -33,7 +33,7 @@ function navigateSchemeRecords() {
 }
 
 function navigateToCustomerCard() {
-  Toaster.postMessage("navigateToCustomerCard");
+  Toaster.postMessage("navigateCustomerCard");
 }
 
 function navigateTransactionHistory() {
