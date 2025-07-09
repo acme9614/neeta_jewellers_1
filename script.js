@@ -14,6 +14,7 @@ function closeDrawer() {
 
 function navigateToScheme() {
   Toaster.postMessage("navigateToScheme");
+
 }
 
 function navigateToBankDetails() {
