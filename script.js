@@ -13,8 +13,7 @@ function closeDrawer() {
 // drawers menu
 
 function navigateToScheme() {
-  Toaster.postMessage("navigateToScheme");
-
+  Toaster.postMessage("navigateScheme");
 }
 
 function navigateToBankDetails() {
