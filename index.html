@@ -1,531 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neeta Jewellers</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- SwiperJS CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neeta Jewellers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Header Section with Bell Icon -->
-    <div class="relative">
-      <!-- Drawer -->
-      <div
-        id="drawer"
-        class="fixed top-0 left-0 h-full w-1/2 bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 overflow-y-auto"
-      >
-        <div class="flex items-center justify-between p-4 border-b">
-          <h2 class="text-lg font-bold">Menu</h2>
-          <button onclick="closeDrawer()" class="text-xl">✖</button>
-        </div>
-        <ul class="p-4 space-y-3">
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToScheme()"
-              >Scheme</a
-            >
-          </li>
-          <li>
+  <!-- SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header Section with Bell Icon -->
+  <div class="relative">
+    <!-- Drawer -->
+    <div id="drawer"
+      class="fixed top-0 left-0 h-full w-1/2 bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 overflow-y-auto">
+      <div class="flex items-center justify-between p-4 border-b">
+        <h2 class="text-lg font-bold">Menu</h2>
+        <button onclick="closeDrawer()" class="text-xl">✖</button>
+      </div>
+      <ul class="p-4 space-y-3">
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]" onclick="navigateToScheme()">Scheme</a>
+        </li>
+        <!-- <li>
             <a
               href="#"
               class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
               onclick="navigateToCatalogues()"
               >Catalogues</a
             >
-          </li>
-          <li>
+          </li> -->
+        <!-- <li>
             <a
               href="#"
               class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
               onclick="navigateToQuickPurchase()"
               >Quick Purchase</a
             >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToBankDetails()"
-              >Bank</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToKyc()"
-              >KYC</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToRate()"
-              >Rate</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateSchemeRecords()"
-              >Records</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToCustomerCard()"
-              >Card</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateTransactionHistory()"
-              >History</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToMyOrder()"
-              >Order</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToUserProfile()"
-              >Profile</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToDigitalGold()"
-              >Gold</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToPanchang()"
-              >Panchang</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
-              onclick="navigateToSetting()"
-              >Settings</a
-            >
-          </li>
-        </ul>
-      </div>
+          </li> -->
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]" onclick="navigateToBankDetails()">Bank</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]" onclick="navigateToKyc()">KYC</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]" onclick="navigateToRate()">Rate</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
+            onclick="navigateSchemeRecords()">Records</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
+            onclick="navigateToCustomerCard()">Card</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
+            onclick="navigateTransactionHistory()">History</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]" onclick="navigateToMyOrder()">Order</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
+            onclick="navigateToUserProfile()">Profile</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]" onclick="navigateToDigitalGold()">Gold</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]"
+            onclick="navigateToPanchang()">Panchang</a>
+        </li>
+        <li>
+          <a href="#" class="text-[#2C2C2C] font-medium hover:text-[#8B5E3C]" onclick="navigateToSetting()">Settings</a>
+        </li>
+      </ul>
+    </div>
 
-      <!-- Overlay -->
-      <div
-        id="overlay"
-        class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
-        onclick="closeDrawer()"
-      ></div>
+    <!-- Overlay -->
+    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40" onclick="closeDrawer()"></div>
 
-      <!-- Header -->
-      <div class="bg-white w-full relative shadow-sm">
-        <div class="max-w-screen-xl mx-auto px-4 relative">
-          <div class="h-20 flex items-center justify-start relative">
-            <!-- Left: Menu Icon -->
-            <div class="z-50">
-              <button
-                id="menuButton"
-                onclick="openDrawer()"
-                class="text-3xl text-black focus:outline-none"
-              >
-                ☰
+    <!-- Header -->
+    <div class="bg-white w-full relative shadow-sm">
+      <div class="max-w-screen-xl mx-auto px-4 relative">
+        <div class="h-20 flex items-center justify-start relative">
+          <!-- Left: Menu Icon -->
+          <div class="z-50">
+            <button id="menuButton" onclick="openDrawer()" class="text-3xl text-black focus:outline-none">
+              ☰
+            </button>
+          </div>
+
+          <!-- Center: Logo -->
+          <div class="absolute left-36 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <a href="#" class="flex items-center space-x-2">
+              <img src="assets/neeta-jewello-logo.png" alt="Neeta Logo" class="h-16 w-auto object-contain" />
+            </a>
+          </div>
+
+          <!-- Right: Bell Icon -->
+          <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
+            <div class="relative z-50">
+              <button class="relative focus:outline-none">
+                <i class="far fa-bell text-black text-3xl"></i>
               </button>
             </div>
-
-            <!-- Center: Logo -->
-            <div
-              class="absolute left-36 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            >
-              <a href="#" class="flex items-center space-x-2">
-                <img
-                  src="assets/neeta-jewello-logo.png"
-                  alt="Neeta Logo"
-                  class="h-16 w-auto object-contain"
-                />
-              </a>
-            </div>
-
-            <!-- Right: Bell Icon -->
-            <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
-              <div class="relative z-50">
-                <button class="relative focus:outline-none">
-                  <i class="far fa-bell text-black text-3xl"></i>
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- ✅ Full Width Swiper Banner Slider with Logo -->
-    <div class="w-full" id="brandSwiper">
-      <div class="swiper brandSwiper w-full relative">
+  <!-- ✅ Full Width Swiper Banner Slider with Logo -->
+  <div class="w-full" id="brandSwiper">
+    <div class="swiper brandSwiper w-full relative">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative">
+          <!-- <img
+              src="assets/BHIMA BOY.png"
+              alt="Logo"
+              class="absolute top-4 right-4 w-10 h-10 md:w-16 md:h-16 object-contain z-10"
+            /> -->
+          <img src="assets/slider1.jpg" alt="Brand 1"
+            class="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] object-fill" />
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative">
+          <!-- <img
+              src="assets/BHIMA BOY.png"
+              alt="Logo"
+              class="absolute top-4 right-4 w-10 h-10 md:w-16 md:h-16 object-contain z-10"
+            /> -->
+          <img src="assets/slider2.jpg" alt="Brand 2"
+            class="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] object-fill" />
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide relative">
+          <!-- <img
+              src="assets/BHIMA BOY.png"
+              alt="Logo"
+              class="absolute top-4 right-4 w-10 h-10 md:w-16 md:h-16 object-contain z-10"
+            /> -->
+          <img src="assets/slider3.jpg" alt="Brand 3"
+            class="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] object-fill" />
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-next hidden lg:flex"></div>
+      <div class="swiper-button-prev hidden lg:flex"></div>
+
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination absolute bottom-4 left-0 right-0 mx-auto text-center z-10"></div>
+    </div>
+  </div>
+
+  <!-- price tag  -->
+  <div class="flex items-center justify-center py-4">
+    <div class="bg-[#A06F5B] text-white px-16 py-2 rounded-full flex items-center space-x-4 shadow-md">
+      <span class="text-sm font-medium">18KT (750)</span>
+      <span class="text-sm font-bold">₹7229<span class="text-xs font-normal">/gm</span></span>
+    </div>
+  </div>
+
+  <!-- services  -->
+  <section class="bg-white py-4 px-4">
+    <!-- First Row -->
+    <div class="max-w-6xl mx-auto grid grid-cols-4 gap-4 justify-center place-items-center">
+      <!-- 4 Visible Cards -->
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToScheme()">
+        <img src="https://cdn-icons-png.flaticon.com/128/157/157358.png" alt="Scheme"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Scheme</span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToBankDetails()">
+        <img src="https://cdn-icons-png.flaticon.com/128/2830/2830155.png" alt="Bank"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Bank</span>
+      </div>
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToKyc()">
+        <img src="https://cdn-icons-png.flaticon.com/128/18281/18281942.png" alt="KYC"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">KYC</span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToRate()">
+        <img src="https://cdn-icons-png.flaticon.com/128/592/592015.png" alt="Rate"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Rate</span>
+      </div>
+
+    </div>
+
+    <!-- Extra Cards (Hidden Initially) -->
+    <div id="moreCards"
+      class="max-w-6xl mx-auto grid grid-cols-4 gap-4 justify-center place-items-center mt-4 transition-all duration-500 ease-in-out"
+      style="max-height: 0; opacity: 0">
+      <!-- Add more cards below -->
+
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateSchemeRecords()">
+        <img src="https://cdn-icons-png.flaticon.com/128/2910/2910768.png" alt="Records"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Records</span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToCustomerCard()">
+        <img src="https://cdn-icons-png.flaticon.com/128/423/423519.png" alt="Card"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Card</span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateTransactionHistory()">
+        <img src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png" alt="History"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">History</span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToMyOrder()">
+        <img src="https://cdn-icons-png.flaticon.com/128/4556/4556009.png" alt="Order"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Order</span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToUserProfile()">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="profile"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Profile</span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToDigitalGold()">
+        <img src="https://cdn-icons-png.flaticon.com/128/10040/10040888.png" alt="Gold"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Gold</span>
+      </div>
+
+      <!-- <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToCatalogues()">
+        <img src="https://cdn-icons-png.flaticon.com/128/29/29341.png" alt="Catalogues"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Catalogues</span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToQuickPurchase()">
+        <img src="https://cdn-icons-png.flaticon.com/128/1019/1019709.png" alt="Quick Purchase"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Quick <br class="md:hidden"> Purchase</span>
+      </div> -->
+
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToPanchang()">
+        <img src="https://cdn-icons-png.flaticon.com/128/3013/3013143.png" alt="Book My Gold"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Panchang</span>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
+        onclick="navigateToSetting()">
+        <img src="https://cdn-icons-png.flaticon.com/128/503/503822.png" alt="Book My Gold"
+          class="w-8 h-8 md:w-10 md:h-10 mb-2 invert" />
+        <span class="text-sm font-normal md:font-medium">Settings</span>
+      </div>
+    </div>
+
+    <!-- Toggle Button -->
+    <div class="text-center mt-2">
+      <button onclick="toggleCards()" id="toggleButton" class="text-[#8D5B46] hover:text-black transition">
+        <svg class="w-6 h-6 mx-auto animate-bounce" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+        <span class="text-sm font-medium mt-1 block">Show More</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- collection swiper  -->
+  <section class="bg-white px-4 pb-8">
+    <!-- Header -->
+    <div class="text-center py-4 flex items-center justify-center gap-4">
+      <p class="text-lg">
+        Invest In Gold : A Smart Move To Secure Your Financial Future
+      </p>
+    </div>
+
+    <!-- Slider -->
+    <div class="w-full mx-auto px-4 py-4">
+      <div class="swiper branding-image-slider">
         <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide relative">
-            <!-- <img
-              src="assets/BHIMA BOY.png"
-              alt="Logo"
-              class="absolute top-4 right-4 w-10 h-10 md:w-16 md:h-16 object-contain z-10"
-            /> -->
-            <img
-              src="assets/slider1.jpg"
-              alt="Brand 1"
-              class="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] object-fill"
-            />
+          <!-- Slides -->
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="assets/slider1.jpg" alt="Brand 1"
+              class="w-[90%] md:w-[90%] h-[200px] md:h-[300px] lg:w-[90%] lg:h-[400px] rounded-lg object-fill" />
           </div>
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide relative">
-            <!-- <img
-              src="assets/BHIMA BOY.png"
-              alt="Logo"
-              class="absolute top-4 right-4 w-10 h-10 md:w-16 md:h-16 object-contain z-10"
-            /> -->
-            <img
-              src="assets/slider2.jpg"
-              alt="Brand 2"
-              class="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] object-fill"
-            />
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="assets/slider2.jpg" alt="Brand 2"
+              class="w-[90%] md:w-[90%] h-[200px] md:h-[300px] lg:w-[90% lg:h-[400px] rounded-lg object-fill" />
           </div>
-
-          <!-- Slide 3 -->
-          <div class="swiper-slide relative">
-            <!-- <img
-              src="assets/BHIMA BOY.png"
-              alt="Logo"
-              class="absolute top-4 right-4 w-10 h-10 md:w-16 md:h-16 object-contain z-10"
-            /> -->
-            <img
-              src="assets/slider3.jpg"
-              alt="Brand 3"
-              class="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] object-fill"
-            />
+          <div class="swiper-slide flex justify-center items-center">
+            <img src="assets/slider3.jpg" alt="Brand 3"
+              class="w-[90%] md:w-[90%] h-[200px] md:h-[300px] lg:w-[90%] lg:h-[400px] rounded-lg object-fill" />
           </div>
         </div>
-
-        <!-- Navigation Arrows -->
-        <div class="swiper-button-next hidden lg:flex"></div>
-        <div class="swiper-button-prev hidden lg:flex"></div>
-
-        <!-- Pagination Dots -->
-        <div
-          class="swiper-pagination absolute bottom-4 left-0 right-0 mx-auto text-center z-10"
-        ></div>
       </div>
     </div>
+  </section>
 
-    <!-- price tag  -->
-    <div class="flex items-center justify-center py-4">
-      <div
-        class="bg-[#A06F5B] text-white px-16 py-2 rounded-full flex items-center space-x-4 shadow-md"
-      >
-        <span class="text-sm font-medium">18KT (750)</span>
-        <span class="text-sm font-bold"
-          >₹7229<span class="text-xs font-normal">/gm</span></span
-        >
-      </div>
-    </div>
+  <!-- SwiperJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- services  -->
-    <section class="bg-white py-4 px-4">
-      <!-- First Row -->
-      <div
-        class="max-w-6xl mx-auto grid grid-cols-4 gap-4 justify-center place-items-center"
-      >
-        <!-- 4 Visible Cards -->
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToScheme()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/157/157358.png"
-            alt="Scheme"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Scheme</span>
-        </div>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
 
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToCatalogues()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/29/29341.png"
-            alt="Catalogues"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Catalogues</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToQuickPurchase()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/1019/1019709.png"
-            alt="Quick Purchase"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Quick <br class="md:hidden"> Purchase</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToBankDetails()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/2830/2830155.png"
-            alt="Bank"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Bank</span>
-        </div>
-
-        
-      </div>
-
-      <!-- Extra Cards (Hidden Initially) -->
-      <div
-        id="moreCards"
-        class="max-w-6xl mx-auto grid grid-cols-4 gap-4 justify-center place-items-center mt-4 transition-all duration-500 ease-in-out"
-        style="max-height: 0; opacity: 0"
-      >
-        <!-- Add more cards below -->
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToKyc()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/18281/18281942.png"
-            alt="KYC"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">KYC</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToRate()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/592/592015.png"
-            alt="Rate"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Rate</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateSchemeRecords()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/2910/2910768.png"
-            alt="Records"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Records</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToCustomerCard()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/423/423519.png"
-            alt="Card"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Card</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateTransactionHistory()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png"
-            alt="History"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">History</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToMyOrder()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/4556/4556009.png"
-            alt="Order"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Order</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToUserProfile()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png"
-            alt="profile"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Profile</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToDigitalGold()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/10040/10040888.png"
-            alt="Gold"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Gold</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToPanchang()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/3013/3013143.png"
-            alt="Book My Gold"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Panchang</span>
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center bg-[#8D5B46] text-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] w-24 h-24 md:w-36 md:h-36 text-center"
-          onclick="navigateToSetting()"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/503/503822.png"
-            alt="Book My Gold"
-            class="w-8 h-8 md:w-10 md:h-10 mb-2 invert"
-          />
-          <span class="text-sm font-normal md:font-medium">Settings</span>
-        </div>
-      </div>
-
-      <!-- Toggle Button -->
-      <div class="text-center mt-2">
-        <button
-          onclick="toggleCards()"
-          id="toggleButton"
-          class="text-[#8D5B46] hover:text-black transition"
-        >
-          <svg
-            class="w-6 h-6 mx-auto animate-bounce"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-          <span class="text-sm font-medium mt-1 block">Show More</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- collection swiper  -->
-    <section class="bg-white px-4 pb-8">
-      <!-- Header -->
-      <div class="text-center py-4 flex items-center justify-center gap-4">
-        <p class="text-lg">
-          Invest In Gold : A Smart Move To Secure Your Financial Future
-        </p>
-      </div>
-
-      <!-- Slider -->
-      <div class="w-full mx-auto px-4 py-4">
-        <div class="swiper branding-image-slider">
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide flex justify-center items-center">
-              <img
-                src="assets/slider1.jpg"
-                alt="Brand 1"
-                class="w-[90%] md:w-[90%] h-[200px] md:h-[300px] lg:w-[90%] lg:h-[400px] rounded-lg object-fill"
-              />
-            </div>
-            <div class="swiper-slide flex justify-center items-center">
-              <img
-                src="assets/slider2.jpg"
-                alt="Brand 2"
-                class="w-[90%] md:w-[90%] h-[200px] md:h-[300px] lg:w-[90% lg:h-[400px] rounded-lg object-fill"
-              />
-            </div>
-            <div class="swiper-slide flex justify-center items-center">
-              <img
-                src="assets/slider3.jpg"
-                alt="Brand 3"
-                class="w-[90%] md:w-[90%] h-[200px] md:h-[300px] lg:w-[90%] lg:h-[400px] rounded-lg object-fill"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SwiperJS Script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-  </body>
 </html>
